@@ -1,0 +1,78 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="favicon.ico?" type="image/x-icon">
+    <title>Leaflet</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" />
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        #map {
+            position: absolute;
+            width: 75%;
+            left: 25%;
+            top: 0;
+            bottom: 0;
+            /*background: #d9f7f7; */
+        }
+
+        #sidebar {
+            width: 25%;
+
+        }
+
+        #button {
+            width: 60%;
+            margin: 5px auto;
+            text-align: center;
+            display: block;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id='sidebar'>
+        <button id='button' onclick="changeProj()">Change to Mercator</button>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <button id='button' onclick="changeView('AFRICA','Africa_(62,192)')">Africa</button>
+        <button id='button' onclick="changeView('ASIA-TROPICAL', 'Tropical_Asia_(78,218)')">Asia Tropical</button>
+        <button id='button' onclick="changeView('ASIA-TEMPERATE', 'Temperate_Asia_(46,703)')">Asia Temperate</button>
+        <button id='button' onclick="changeView('NORTHERN AMERICA','North_America_(30,053)')">North America</button>
+        <button id='button' onclick="changeView('SOUTHERN AMERICA', 'South_America_(112,606)')">South America</button>
+        <button id='button' onclick="changeView('AUSTRALASIA', 'Australasia_(22.890)')">Australasia</button>
+        <button id='button' onclick="changeView('EUROPE', 'Europe_(14,148)')">Europe</button>
+
+
+
+    </div>
+    <div id="map">
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
+
+    <script src='https://npmcdn.com/@turf/turf/turf.min.js'></script>
+
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://unpkg.com/topojson@3"></script>
+    <script src="https://unpkg.com/@tweenjs/tween.js@18.5.0/dist/tween.umd.js"></script>
+
+    <script src="https://unpkg.com/leaflet-ant-path" type="text/javascript"></script>
+
+    <script src="https://elfalem.github.io/Leaflet.curve/src/leaflet.curve.js"></script>
+    <script src="app.js"></script>
+
+</body>
+
+</html>
